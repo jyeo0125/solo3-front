@@ -12,11 +12,11 @@
 * User can edit the own posts' title and content and user profile.
 * User do not need to re-login for using this application after page-refresh. 
 ## MDR
-![picture](../img/mdr.png)
+![picture](./img/mdr.png)
 
 
 ## Wire-Frame
-![picture](../img/wire.png)
+![picture](./img/wire.png)
 ## MVP
 * Create user 
 * Login user
