@@ -19,6 +19,18 @@ const Profile = (props) =>{
 
     return(
         <div>
+          <div>
+               <h1>
+                Hi ~! {props.user.name} 
+                </h1>
+              <br></br>
+              <p> Curruent User Information</p>
+                <p>name:{props.user.name}</p>
+                <p>E-mail:{props.user.email}</p>
+                
+          </div>
+          
+          
            <form className='singupform' onSubmit={submitHandler}>
                 <div>
                     <label htmlFor='name'>name:</label>

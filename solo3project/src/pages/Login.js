@@ -10,7 +10,7 @@ const Login = (props) => {
         e.preventDefault()
         axios.post(`${process.env.REACT_APP_BACKEND_URL}/users/login`, {email,password})
         .then ((response)=>{
-            // console.log(response.data.user);
+            console.log(response.data.user);
             props.setUser(response.data.user)
             localStorage.setItem('userId',response.data.user.id)
         })

@@ -3,6 +3,8 @@ import Login from './pages/Login';
 import Singup from './pages/Singup';
 import Home from './pages/Home'
 import Profile from './pages/Profile'
+import CreatePost from './pages/CreatePost'
+import AllPost from './pages/AllPost'
 import NavBar from './components/NavBar';
 import {Route} from 'react-router-dom'
 import {useState, useEffect} from'react'
@@ -13,9 +15,11 @@ import axios from 'axios';
 
 function App() {
 
-  const [user, setUser] =useState('')
+  const [user, setUser] =useState({})
 
   const verifyUser = () => {
+    if (!localStorage.getItem('useId')) {return}
+
     axios.get(`${process.env.REACT_APP_BACKEND_URL}/users/verify`,{
       headers: {
         Authorization: localStorage.getItem('userId')
@@ -27,9 +31,7 @@ function App() {
 
   return (
     <div>
-      <NavBar
-      user={user} setUser={setUser}
-      />
+      <NavBar />
       <hr></hr>
       <Route
       path='/'
@@ -44,6 +46,7 @@ function App() {
       render={()=>{
         return<Login setUser={setUser}/>
       }}
+      
       />      
       
       <Route
@@ -62,6 +65,17 @@ function App() {
       }}
       />
       
+      <Route
+      path='/posts'
+      render={()=>{
+        return<CreatePost
+        user={user}/>
+      }}
+      />
+
+      
+      <AllPost
+      user={user} setUser={setUser}/>
 
      
     </div>
