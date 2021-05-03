@@ -1,5 +1,6 @@
 import axios from 'axios'
 import {Link} from 'react-router-dom'
+
 import{useEffect,useState} from 'react'
 
 
@@ -7,9 +8,10 @@ import{useEffect,useState} from 'react'
 const AllPost = (props)=>{
 
     const [allpost, setAllpost] = useState([])
+ 
 
     const fetchPosts = () => {
-        axios.get(`${process.env.REACT_APP_BACKEND_URL}/posts/${props.user.id}`,{
+       axios.get(`${process.env.REACT_APP_BACKEND_URL}/posts/${localStorage.getItem('userId')}`,{
             headers:{
                 Authorization:props.user.id
             }
@@ -19,18 +21,43 @@ const AllPost = (props)=>{
             setAllpost(response.data.post)
         })
     }
-    
-    useEffect(fetchPosts,[])
 
+    
+
+    // const handleClick =(event)=>{
+    //     event.preventDefault()
+    //     console.log(event.target.value);
+    // }
+ 
+    
+      useEffect(fetchPosts,[])
+        // console.log(allpost);
     return(
         <ul>
-        {/* {allpost.map((post)=>{
-            return <li key ={post.id}>
-                <Link to ='/'>
-                {post.title}
-                </Link>
-            </li> */}
-        })}
+        {
+           
+          allpost && allpost.map((post)=>{
+           return <li  key ={post.id}>
+              <div className='postContainer'>
+               <Link to ='/posts'>{post.title}</Link>
+               
+               <br></br>
+               {post.content}
+               <button value={post.id} onClick={()=>{
+                   axios.delete(`${process.env.REACT_APP_BACKEND_URL}/posts/delete/${post.id}`,{
+                       headers: {
+                        Authorization: localStorage.getItem('userId')
+                        }
+                      })
+               }} >Destroy</button>
+                
+              </div>
+             
+           </li>
+           })
+   
+          
+       }
         </ul>
     )
 }

@@ -6,36 +6,46 @@ import {Link} from 'react-router-dom'
 const NavBar = (props) => {
     // const [user, setUser] = useContext(UserContext)
 
-  
+    console.log(props);
 
     return(
         <div className='navBar'> 
-        <Link to ='/'>Home</Link>
-        {'    |    '}
+            <Link to ='/'>Home</Link>
+            {'    |    '}
         
-        {/* {props.user ? */}
-        <>
-            <span 
-            className='logout'
-            onClick={()=>{
-                localStorage.removeItem('userId')
+        {props.user.id ?
+        
+            <>
+                <span 
+             className='logout'
+                onClick={()=>{
                 props.setUser({})
-            }}
-            >Logout</span>
+                localStorage.removeItem('userId')
+                }}
+               >Logout</span>
         
-            {'    |    '}
-            <Link to ='/profile'>Profile</Link>
-            {'    |    '}
-            <Link to='/posts'>Create Post</Link>
-        </>
-        : 
-        <>
+                {'    |    '}
+                <Link to ='/profile'>Profile</Link>
+                {'    |    '}
+                <Link to='/posts'>Create Post</Link>
+                {'    |    '}
+                <Link to='/allpost'>All post!</Link>
+            </>
+          : 
+          
+          <>
             <Link to ='/login'>Login</Link>
             {'    |    '}
             <Link to='/singup'>Sing-Up</Link>
             {'    |    '}
-        </>
-     } 
+          </>
+          
+          }
+            
+        
+            
+             
+        
         </div>
 
     )

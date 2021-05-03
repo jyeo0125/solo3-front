@@ -31,7 +31,9 @@ function App() {
 
   return (
     <div>
-      <NavBar />
+      <NavBar 
+      user={user}
+      setUser={setUser}/>
       <hr></hr>
       <Route
       path='/'
@@ -73,10 +75,15 @@ function App() {
       }}
       />
 
+      <Route
+      path='/allpost'
+      render={()=>{
+        return <AllPost
+        user={user} setUser={setUser}/>
+      }}
+      />
       
-      <AllPost
-      user={user} setUser={setUser}/>
-
+  
      
     </div>
   );
