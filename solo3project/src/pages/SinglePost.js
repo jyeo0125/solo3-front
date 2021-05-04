@@ -19,7 +19,7 @@ const SinglePost = (props) => {
 
     
     return(
-        <div>
+        <div className='singleDiv'>
             <div>
                 <h1>Currunt Note</h1>
                 <h2></h2>
@@ -35,7 +35,7 @@ const SinglePost = (props) => {
                     <input id='title' vlaue={title} onChange={(e)=>{setTitle(e.target.value)}} />
                 </div>
                 <div>
-                    <label htmlFor='content'>Content</label>
+                    <label htmlFor='content'>Content:</label>
                     <input id='content' value={content} onChange={(e)=>{setContent(e.target.value)}} />
                 </div>
                 <div>

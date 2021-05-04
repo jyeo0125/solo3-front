@@ -19,7 +19,7 @@ function App() {
   const [user, setUser] =useState({})
 
   const verifyUser = () => {
-    if (!localStorage.getItem('useId')) {return}
+    if (!localStorage.getItem('userId')) {return}
 
     axios.get(`${process.env.REACT_APP_BACKEND_URL}/users/verify`,{
       headers: {
@@ -31,7 +31,7 @@ function App() {
   useEffect(verifyUser, [])
 
   return (
-    <div>
+    <div className='mainDiv'>
       <NavBar 
       user={user}
       setUser={setUser}/>

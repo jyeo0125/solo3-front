@@ -2,7 +2,7 @@ import {useState} from 'react'
 import axios from 'axios'
 const Profile = (props) =>{
 
-    const [name,setName] = useState('')
+    const [name,setName] = useState(props.user.name || '')
     const [email,setEmail] = useState('')
     const [password, setPassword] = useState('')
 
@@ -19,22 +19,22 @@ const Profile = (props) =>{
 
     return(
         <div>
-          <div>
+          <div className='profileOne'>
                <h1>
                 Hi ~! {props.user.name} 
                 </h1>
               <br></br>
-              <p> Curruent User Information</p>
-                <p>name:{props.user.name}</p>
-                <p>E-mail:{props.user.email}</p>
+              <h2> Curruent User Information</h2>
+                <p>name:     {props.user.name}</p>
+                <p>E-mail:   {props.user.email}</p>
                 
           </div>
           
-          
+          <div className="profileTwo">
            <form className='singupform' onSubmit={submitHandler}>
                 <div>
                     <label htmlFor='name'>name:</label>
-                    <input id='name' value={name}  onChange={(e)=>{setName(e.target.value)}} />
+                    <input id='name'   value={name}  onChange={(e)=>{setName(e.target.value)}} />
                 </div>
                 <div>
                     <label htmlFor='email'>E-mail:</label>
@@ -48,6 +48,7 @@ const Profile = (props) =>{
                     <input type='submit' value="UpDate"/>
                 </div>
             </form>
+          </div >
         </div>
     )
 }

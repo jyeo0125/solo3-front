@@ -14,7 +14,7 @@ const Singup = () => {
     }
 
     return(
-        <div>
+        <div className='singupDiv'>
             <form className='singupform' onSubmit={submitHandler}>
                 <div>
                     <label htmlFor='name'>name:</label>

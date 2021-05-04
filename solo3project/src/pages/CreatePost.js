@@ -17,15 +17,15 @@ const CreatePost = (props) =>{
 
 
     return(
-        <div>
+        <div className='createDiv'>
             <form className='createpostform' onSubmit={submitHandler}>
                 <div>
-                    <label htmlFor='title'>Title:</label>
+                    <label htmlFor='title'>Title:  </label>
                     <input id='title' vlaue={title} onChange={(e)=>{setTitle(e.target.value)}} />
                 </div>
                 <div>
-                    <label htmlFor='content'>Content</label>
-                    <input id='content' value={content} onChange={(e)=>{setContent(e.target.value)}} />
+                    <label htmlFor='contentOne'>Content:  </label>
+                    <input id='contentOne' value={content} onChange={(e)=>{setContent(e.target.value)}} />
                 </div>
                 <div>
                     <input type='submit' value="Create the personal post"/>

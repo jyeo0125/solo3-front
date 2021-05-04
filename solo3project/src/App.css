@@ -6,11 +6,67 @@
   border: 1px solid black;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  height: 300px;
+  width: 30vw;
+}
+.singupDiv{
+  display: flex;
+  justify-content: center;
 }
 .loginform{
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 300px;
+  width: 30vw;
+}
+.loginDiv{
+  display: flex;
+  justify-content: center;
+}
+.postContainer{
+  border: 1px solid;
+  width: 40vw;
+  text-align: center;
+}
+.createpostform{
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+  height: 300px;
+}
+.createDiv{
+  display: flex;
+  justify-content: center;
+}
+.homeDiv{
+  display: flex;
+  justify-content: center;
+}
+.singleDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#contentOne{
+  width: 30vw;
+  height: 30vh;
+}
+.profileOne{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profileTwo{
   display: flex;
   flex-direction: column;
   justify-content: center;

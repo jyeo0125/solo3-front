@@ -17,15 +17,15 @@ const Login = (props) => {
     }
 
     return(
-        <div>
+        <div className='loginDiv'>
             <form className='loginform' onSubmit={submitHandler}>
                 <div>
-                    <label htmlFor='email'>E-mail:</label>
-                    <input id='email' value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
+                    <label htmlFor='emailone'>E-mail:</label>
+                    <input id='emailone' value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
                 </div>
                 <div>
-                    <label htmlFor='password'>Password:</label>
-                    <input id='password' value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
+                    <label htmlFor='passwordone'>Password:</label>
+                    <input id='passwordone' value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
                 </div>
                 <div>
                     <input type='submit' value='Login' />
