@@ -39,7 +39,7 @@ const AllPost = (props)=>{
           allpost && allpost.map((post)=>{
            return <li  key ={post.id}>
               <div className='postContainer'>
-               <Link to ='/posts'>{post.title}</Link>
+               <Link to ={`/posts/${post.id}/`} >{post.title}</Link>
                
                <br></br>
                {post.content}

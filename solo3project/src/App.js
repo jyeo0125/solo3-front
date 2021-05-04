@@ -5,8 +5,9 @@ import Home from './pages/Home'
 import Profile from './pages/Profile'
 import CreatePost from './pages/CreatePost'
 import AllPost from './pages/AllPost'
-import NavBar from './components/NavBar';
-import {Route} from 'react-router-dom'
+import NavBar from './components/NavBar'
+import SinglePost from './pages/SinglePost'
+import {Route,Redirect} from 'react-router-dom'
 import {useState, useEffect} from'react'
 import axios from 'axios';
 
@@ -58,32 +59,90 @@ function App() {
       }}
       />
 
-      <Route
+
+      {/* <Route
       path='/profile'
       render={()=>{
         return<Profile
         user={user} setUser={setUser}
         />
       }}
-      />
+      /> */}
+
+      <Route 
+      path="/profile" 
+      render={() => {
+            if (user.id) {
+              return <Profile 
+              user={user} setUser={setUser}/>
+            } else {
+              return <Redirect to="/login" />
+            }
+      }} /> 
       
-      <Route
+      {/* <Route
       path='/posts'
+      exact
       render={()=>{
         return<CreatePost
         user={user}/>
       }}
-      />
+      /> */}
 
-      <Route
+      <Route 
+      path="/posts" 
+      exact
+      render={() => {
+            if (user.id) {
+              return <CreatePost 
+              user={user}/>
+            } else {
+              return <Redirect to="/login" />
+            }
+      }} /> 
+
+      {/* <Route
       path='/allpost'
       render={()=>{
         return <AllPost
         user={user} setUser={setUser}/>
       }}
-      />
+      /> */}
+
+      <Route 
+      path="/allpost" 
+      render={() => {
+            if (user.id) {
+              return <AllPost 
+              user={user} setUser={setUser}/>
+            } else {
+              return <Redirect to="/login" />
+            }
+      }} /> 
       
-  
+
+      {/* <Route
+      path='/posts/:id'
+      exact
+      render ={(data)=>{
+        return<SinglePost
+        id={data.match.params.id}
+        />
+      }}
+      /> */}
+      
+       <Route 
+      path="/posts/:id" 
+      exact
+      render={(data) => {
+            if (user.id) {
+              return <SinglePost 
+              id={data.match.params.id}/>
+            } else {
+              return <Redirect to="/login" />
+            }
+      }} /> 
+      
      
     </div>
   );
