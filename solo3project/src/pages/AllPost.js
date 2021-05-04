@@ -40,7 +40,8 @@ const AllPost = (props)=>{
            return <li  key ={post.id}>
               <div className='postContainer'>
                   <label>Title:</label>
-               <Link to ={`/posts/${post.id}/`} >{post.title}</Link>
+                  
+               <Link to ={`/posts/${post.id}/`}>{post.title}</Link>
                
                <hr/>
                <label>Content:</label>

@@ -3,8 +3,8 @@ import axios from 'axios'
 const Profile = (props) =>{
 
     const [name,setName] = useState(props.user.name || '')
-    const [email,setEmail] = useState('')
-    const [password, setPassword] = useState('')
+    const [email,setEmail] = useState(props.user.email || '')
+    const [password, setPassword] = useState(props.user.password || '')
 
     const submitHandler = (e) => {
         e.preventDefault()
@@ -23,10 +23,7 @@ const Profile = (props) =>{
                <h1>
                 Hi ~! {props.user.name} 
                 </h1>
-              <br></br>
-              <h2> Curruent User Information</h2>
-                <p>name:     {props.user.name}</p>
-                <p>E-mail:   {props.user.email}</p>
+              
                 
           </div>
           

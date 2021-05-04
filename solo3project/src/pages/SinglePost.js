@@ -21,7 +21,7 @@ const SinglePost = (props) => {
     return(
         <div className='singleDiv'>
             <div>
-                <h1>Currunt Note</h1>
+                <h1>Edit Plz</h1>
                 <h2></h2>
             </div>
 
