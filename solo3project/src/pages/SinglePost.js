@@ -22,7 +22,7 @@ const SinglePost = (props) => {
         <div className='singleDiv'>
             <div>
                 <h1>Edit Plz</h1>
-                <h2></h2>
+                
             </div>
 
 

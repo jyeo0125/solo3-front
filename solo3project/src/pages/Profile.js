@@ -39,7 +39,7 @@ const Profile = (props) =>{
                 </div>
                 <div>
                     <label htmlFor='password'>Password:</label>
-                    <input id='password' value={password}  onChange={(e)=>{setPassword(e.target.value)}} />
+                    <input  type='password'id='password' value={password}  onChange={(e)=>{setPassword(e.target.value)}} />
                 </div>
                 <div>
                     <input type='submit' value="UpDate"/>

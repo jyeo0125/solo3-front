@@ -33,7 +33,7 @@ const AllPost = (props)=>{
     
         // console.log(allpost);
     return(
-        <ul>
+        <ul className='allpostContainer'>
         {
            
           allpost && allpost.map((post)=>{

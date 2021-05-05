@@ -1,6 +1,17 @@
+@import url('//fonts.googleapis.com/css2?family=Pangolin&display=swap');
 .navBar{
   display: flex;
   justify-content: space-around;
+  background-color: black;
+  width: 100%;
+  color: white;
+  
+}
+.navLink,.logout{
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  font-family: 'Pangolin', cursive;
 }
 .singupform{
   border: 1px solid black;
@@ -32,11 +43,12 @@
   border: 1px solid;
   width: 40vw;
   text-align: center;
+  font-family: 'Pangolin', cursive;
 }
 .createpostform{
   display: flex;
   justify-content: space-around;
-  border: 1px solid;
+  
   flex-direction: column;
   align-items: center;
   width: 50vw;
@@ -71,4 +83,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.allpostContainer{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Pangolin', cursive;
+}
+h1{
+  font-family: 'Pangolin', cursive;
+}
+.mainDiv{
+  background-color: lightgrey;
 }

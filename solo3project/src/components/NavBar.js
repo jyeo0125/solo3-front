@@ -10,7 +10,7 @@ const NavBar = (props) => {
 
     return(
         <div className='navBar'> 
-            <Link to ='/'>Home</Link>
+            <Link className='navLink' to ='/'>Home</Link>
             {'    |    '}
         
         {props.user.id ?
@@ -25,18 +25,18 @@ const NavBar = (props) => {
                >Logout</span>
         
                 {'    |    '}
-                <Link to ='/profile'>Profile</Link>
+                <Link className='navLink' to ='/profile'>Profile</Link>
                 {'    |    '}
-                <Link to='/posts'>Create Post</Link>
+                <Link className='navLink' to='/posts'>Create Post</Link>
                 {'    |    '}
-                <Link to='/allpost'>All post!</Link>
+                <Link className='navLink' to='/allpost'>All post!</Link>
             </>
           : 
           
           <>
-            <Link to ='/login'>Login</Link>
+            <Link className='navLink' to ='/login'>Login</Link>
             {'    |    '}
-            <Link to='/singup'>Sing-Up</Link>
+            <Link className='navLink' to='/singup'>Sing-Up</Link>
             {'    |    '}
           </>
           
