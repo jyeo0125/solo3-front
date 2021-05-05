@@ -39,7 +39,7 @@ const SinglePost = (props) => {
                     <input id='content' value={content} onChange={(e)=>{setContent(e.target.value)}} />
                 </div>
                 <div>
-                    <input type='submit' value="update"/>
+                    <input className='btn' type='submit' value="update"/>
                 </div>
             </form>
         </div>

@@ -98,3 +98,16 @@ h1{
 .mainDiv{
   background-color: lightgrey;
 }
+.btn{
+    font-size: 15px;
+    background-color: white;
+    color: black;
+    border: 1px solid;
+    transition-duration: 0.4s;
+    padding: 5px;
+}
+.btn:hover{
+    background-color:gray;
+    color: white;
+    font-size: 20px;
+}

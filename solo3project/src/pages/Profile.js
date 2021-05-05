@@ -42,7 +42,7 @@ const Profile = (props) =>{
                     <input  type='password'id='password' value={password}  onChange={(e)=>{setPassword(e.target.value)}} />
                 </div>
                 <div>
-                    <input type='submit' value="UpDate"/>
+                    <input  className='btn' type='submit' value="UpDate"/>
                 </div>
             </form>
           </div >

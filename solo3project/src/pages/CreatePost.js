@@ -28,7 +28,7 @@ const CreatePost = (props) =>{
                     <input id='contentOne' value={content} onChange={(e)=>{setContent(e.target.value)}} />
                 </div>
                 <div>
-                    <input type='submit' value="Create the personal post"/>
+                    <input className='btn' type='submit' value="Create the personal post"/>
                 </div>
             </form>
         </div>

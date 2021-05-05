@@ -29,7 +29,7 @@ const Singup = () => {
                     <input id='password' value={password}  onChange={(e)=>{setPassword(e.target.value)}} />
                 </div>
                 <div>
-                    <input type='submit' value="Create Account"/>
+                    <input className='btn' type='submit' value="Create Account"/>
                 </div>
             </form>
         </div>
